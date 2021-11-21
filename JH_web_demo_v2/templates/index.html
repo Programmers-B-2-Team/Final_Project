@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>IBOBA</title>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/theme.css') }}"/>
+    <noscript>
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'css/noscript.css') }}"/>
+    </noscript>
+
+</head>
+
+
+<body>
+
+<!-- ===============================================-->
+<!--    Main Content-->
+<!-- ===============================================-->
+<main class="main" id="top">
+    <section class="py-11 bg-light-gradient border-bottom border-white border-5">
+        <div class="bg-holder overlay overlay-light"
+             style="background-image:url({{ url_for('static', filename= '/img/gallery/header-bg.jpg') }});background-size:cover;">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container">
+            <div class="row flex-center">
+                <div class="col-12 mb-10">
+                    <div class="d-flex align-items-center flex-column">
+                        <h1 class="fw-normal"> With an outstanding style, only for you</h1>
+                        <h1 class="fs-4 fs-lg-8 fs-md-6 fw-bold">Exclusively designed for you</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="col-12 d-flex justify-content-center mb-5">
+        <a class="btn btn-lg btn-dark" href="/select"> Try On </a></div>
+
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+</main>
+<!-- ===============================================-->
+<!--    End of Main Content-->
+<!-- ===============================================-->
+
+
+<!-- ===============================================-->
+<!--    JavaScripts-->
+<!-- ===============================================-->
+<script src="{{ url_for('static', filename= 'js/popper.min.js') }} "></script>
+<script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}  "></script>
+<script src="{{ url_for('static', filename= 'js/is.min.js') }}  "></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+<script src="{{ url_for('static', filename= 'js/feather.min.js') }} "></script>
+<script>feather.replace();</script>
+<script src="{{ url_for('static', filename= 'js/theme.js') }}  "></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet">
+</body>
+
+</html>

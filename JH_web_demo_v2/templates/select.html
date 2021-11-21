@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+    <title>IBOBA</title>
+    <link href="{{ url_for( 'static', filename= 'css/theme.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for( 'static', filename= 'css/upload_button.css') }}" rel="stylesheet"/>
+
+    <script src="{{ url_for('static', filename='/js/functions.js') }} "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{ share.load() }}
+</head>
+
+<body>
+<div class="container">
+    <div>
+        <div class="nav nav-tabs majestic-tabs mb-4 justify-content-center" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="w" data-bs-toggle="tab"
+                    data-bs-target="#nav-women" type="button" role="tab" aria-controls="nav-women"
+                    aria-selected="true" onclick="click_gender(this)">Women
+            </button>
+            <button class="nav-link" id="m" data-bs-toggle="tab" data-bs-target="#nav-men"
+                    type="button" role="tab" aria-controls="nav-men" aria-selected="false"
+                    onclick="click_gender(this)">Men
+            </button>
+        </div>
+        <div class="text-center" id="model" style="min-height: 260px">
+            <img class="img-fluid rounded" src="{{ image_file[0] }}"/>
+        </div>
+    </div>
+    <div class="col-12 d-flex justify-content-center mt-3 file_button">
+        <label for="file_to_upload">Upload</label>
+        <input type="file" id="file_to_upload" accept="image/*" onchange="upload_image(this);">
+    </div>
+</div>
+<div class="col-12">
+    <div class="tab-content py-2" id="nav-tabContent">
+        <div class="container text-center">
+            <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab-women"
+                role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="top" data-bs-toggle="pill"
+                            data-bs-target="#pills-wtshirt" type="button" role="tab"
+                            aria-controls="pills-wtshirt" aria-selected="true"
+                            onclick="click_category(this)">TOP
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="bottom" data-bs-toggle="pill"
+                            data-bs-target="#pills-dresses" type="button" role="tab"
+                            onclick="click_category(this)">BOTTOM
+                    </button>
+                </li>
+            </ul>
+            <div id='items'>
+                <img class="col-2 img-fluid rounded" id="item1" src="{{ image_file[1] }}"
+                     onclick="click_item(this)"/>
+                <img class="col-2 img-fluid rounded" id="item2" src="{{ image_file[2] }}"
+                     onclick="click_item(this)"/>
+                <img class="col-2 img-fluid rounded" id="item3" src="{{ image_file[3] }}"
+                     onclick="click_item(this)"/>
+                <img class="col-2 img-fluid rounded" id="item4" src="{{ image_file[4] }}"
+                     onclick="click_item(this)"/>
+                <img class="col-2 img-fluid rounded" id="item5" src="{{ image_file[5] }}"
+                     onclick="click_item(this)"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="border-bottom border-3"></div>
+    <div class="row flex-center my-3">
+        <div class="col-md-6 order-1 order-md-0">
+
+        </div>
+        <div class="col-md-6">
+            <div class="text-center text-md-end">
+                <a href="https://github.com/Programmers-B-2-Team">
+                    <span class="me-4" data-feather="github"></span>
+                </a>
+                {{ share.create(title='Share with: ', sites='twitter, facebook, linkedin', mobile_sites='twitter, facebook, linkedin', align='right') }}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="{{ url_for("static", filename='vendors/@popperjs/popper.min.js') }} "></script>
+<script src="{{ url_for("static", filename='vendors/bootstrap/bootstrap.min.js') }} "></script>
+<script src="{{ url_for("static", filename='vendors/is/is.min.js') }} "></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+<script src="{{ url_for("static", filename='vendors/feather-icons/feather.min.js') }} "></script>
+<script>feather.replace();</script>
+<script src="{{ url_for("static", filename='/js/theme.js') }} "></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet">
+</body>
+</html>
